@@ -1,0 +1,961 @@
+@charset "utf-8";
+
+
+
+/* ------------- STYLES D'IMAGES ------------- */
+
+/* Images à 100% */
+img {
+    max-width: 100%;
+}
+
+/* Coins congés */
+.image_arrondie {
+    border-radius: 2px;
+}
+
+/* Flèche */
+#div_fleche {
+    display: flex;
+    flex-direction: row;
+    vertical-align: baseline;
+    cursor: pointer;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 40px;
+    width: 204px;
+    height: 25px;
+}
+
+/* Inverser la direction de la flèche */
+#div_fleche img {
+    transform: scaleX(-1);
+}
+
+/* Marges autour de la flèche */
+#marge_fleche {
+    margin-right: 4px;
+    margin-bottom: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- STYLES DE TEXTE ------------- */
+
+
+/* STYLES GÉNÉRAUX POUR LE TEXTE */
+
+p {
+    font-family: Baskerville, "Baskerville", minion, serif;
+    font-size: 18px;
+}
+
+/* Logo et titre index   600    */
+h1 {
+    font-style: 'helvetica';
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+/* Titres principaux partout sauf 1er de la page index */
+h2 {
+    font-family: 'helvetica';
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0px;
+    margin: 0px 16px 16px 0px;
+}
+
+/* Titres pour les parties à exécuter des patrons */
+h3 {
+    font-family: Baskerville, "Baskerville", minion, serif;
+    font-weight: bold;
+    font-size: 16pt;
+    line-height: auto;
+    color: RGB(7, 66, 76);
+}
+
+/* Parce que je veux pas la marge du top pour le premier titre 3 */
+.h3premier_titre {
+    line-height: 0px;
+    margin-top: 7px;
+    padding-bottom: 16px;
+}
+
+/* Titre pour les noms de patrons */
+h4 {
+    font-family: 'helvetica';
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 8px;
+}
+
+/* Style pour les liens */
+a {
+    color: RGB(7, 66, 76);
+    text-decoration: underline;
+}
+
+
+
+/* Brèves descriptions pour les patrons */
+.infos_sommaires {
+    font-family: 'helvetica';
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* Éléments à venir en gris */
+#aVenir {
+    color: #666;
+}
+
+/* Emphase en gras */
+.emphase {
+    font-weight: 900;
+}
+
+/* Texte centré */
+.centre {
+    text-align: center;
+}
+
+/* Texte avec lien qui accompagne les flèches */
+#fleche_txt {
+    font-family: 'helvetica';
+    font-size: 16px;
+    font-weight: lig;
+    color: RGB(7, 66, 76);
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* STYLES DE TEXTE DANS L'ENTÊTE */
+
+/* Onglet pour chacune des pages */
+.lien_entete {
+    font-family: 'helvetica';
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 16px;
+    text-align: center;
+    vertical-align: center;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+.lien_entete:hover {
+    color: RGB(7, 66, 76);
+    transition: .5s;
+}
+
+/* Onglet actif jaune */
+#selected {
+    color: RGB(255,190,0);
+    transition: .5s;
+}
+
+/* Mais qui revient vert lorsqu'on hover */
+#selected:hover {
+    color: RGB(7,66,76);
+    transition: 0.5s;
+}
+
+/* Onglet pas sélectionné */
+#pas_selected {
+    color: white;
+    transition: .5s;
+}
+
+#pas_selected:hover {
+    color: RGB(7,66,76);
+    transition: 0.5s;
+}
+
+
+/* Style unique pour le "logo" */
+#nom {
+    font-family: 'helvetica';
+    font-weight: 100;
+    font-size: xx-large;
+    color: white;
+    margin: 2px 0px 0px 0px;
+}
+
+/* Animation de surlignage */
+.highlight a {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, RGB(255, 190, 0) 0%);
+    background-position: -0% 0;
+    background-size: 200% auto;
+    transition: background-position 0.25s ease-out;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.highlight a:hover {
+    background-position: -99.99% 0;
+    transition: background-position 0.25s ease-out;
+}
+
+
+
+
+
+
+
+/* STYLES DE TEXTE DANS LES PAGES DE PATRONS */
+
+/* Fiche descriptive de patron */
+#fiche_patron p {
+    text-align: left;
+}
+
+/* Lignes explicatives des patrons avec checkbox */
+.patron_par_ligne {
+    font-family: Baskerville, "Baskerville", minion, serif;
+    display: flex;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 24px;
+}
+
+/* Lorsqu'il y a des paragraphes de texte pour expliquer quelque chose au travers les lignes de patrons */
+.para_patron {
+    margin-left: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Dégagement entre la checkbox et le texte */
+#span_patron {
+    padding-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ENTÊTE ET FOOTER */
+
+/* Div pour l'entête qui aligne les éléments à l'extrême gauche et à l'extrême droite */
+.div_entete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: RGB(7, 66, 76);
+    height: 48px;
+    width: auto;
+    box-shadow: 0 1px 8px 0px #888;
+    padding: 8px 0px 8px 40px;
+}
+
+#div_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: RGB(7, 66, 76);
+    padding: 8px;
+    margin-bottom: 0px;
+}
+
+#footer_milieu {
+    font-family: 'helvetica';
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: bottom;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- STYLES DANS LA PAGE INDEX ------------- */
+
+/* Aligner le premier titre avec l'image */
+#h1_index {
+    margin-top: -4px;
+}
+
+/* Splitter l'entête des patrons dans la page index */
+
+.flex_index_voir {
+    display: flex;
+    flex-direction: row;
+    vertical-align: text-top;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.flex_index_voir div:last-child:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- STYLES DANS LA PAGE PATRONS (CATÉGORIES) -------- */
+
+/* Style pour cacher le texte et modifier l'opacité lorsqu'on hover sur les photos de catégories de patrons */
+#patrons {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    filter: grayscale(100%);
+    opacity: 50%;
+    transition: 0.25s;
+
+
+}
+
+#patrons:hover {
+    cursor: pointer;
+    opacity: 100%;
+    color: black;
+    filter: grayscale(0%);
+    transition: 0.25s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* STYLES POUR LES GRILLES DE PATRONS (PAGES PATRONS_AMIGURUMIS_GRILLE ET PATRONS_VETEMENTS_GRILLE) */
+
+/* Items des grilles en noir et blanc */
+.item1 {
+    grid-area: chatassis;
+    filter: grayscale(100%);
+}
+
+.item2 {
+    grid-area: brachiosaure;
+    filter: grayscale(100%);
+}
+
+.item3 {
+    grid-area: dino;
+    filter: grayscale(100%);
+}
+
+.item4 {
+    grid-area: singe;
+    filter: grayscale(100%);
+}
+
+.item5 {
+    grid-area: trex;
+    filter: grayscale(100%);
+}
+
+.item6 {
+    grid-area: lapin;
+    filter: grayscale(100%);
+}
+
+.item7 {
+    grid-area: lamantin;
+    filter: grayscale(100%);
+}
+
+.item8 {
+    grid-area: dindon;
+    filter: grayscale(100%);
+}
+
+.item9 {
+    grid-area: pantoufles;
+    filter: grayscale(100%);
+}
+
+.item10 {
+    grid-area: bas;
+    filter: grayscale(100%);
+}
+
+.item11 {
+    grid-area: chapeau;
+    filter: grayscale(100%);
+}
+
+.item12 {
+    grid-area: foulard;
+    filter: grayscale(100%);
+}
+
+/* Les petites vignettes de patrons dans la grille */
+.grid-container > div,
+.grid-container_vetements > div,
+.grid-container_accueil > div {
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 24px;
+    vertical-align: top;
+    height: auto;
+}
+
+/* L'image devient en couleur avec une ombre lorsqu'on hover */
+.grid-container > div:hover,
+.grid-container_vetements > div:hover,
+.grid-container_accueil > div:hover {
+    background-color: #EEE;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px 0px #CCC;
+    filter: grayscale(0%);
+    transition: 0.2s;
+}
+
+/* La petite main apparait si le patron est prêt à être consulté */
+#cliquable {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- STYLES DANS UNE PAGE DE PATRON (PATRON_CHAT, PATRON_PANTOUFLES)-------- */
+
+.vid_youtube {
+    width: 100%;
+    height: 58%;
+    min-height: 300px;
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+/* Fiche descriptive du patron */
+#fiche_patron {
+    background-color: #EEE;
+    width: auto;
+    border-radius: 0px;
+    box-shadow: 1px 1px 3px 0px #CCC;
+    padding: 16px 16px 1px 16px;
+}
+
+/* Espacement entre la fiche descriptive du patron et la légende */
+#legende_patron {
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- STYLES DANS LA PAGE RESSOURCES -------- */
+
+/* Affichage des logos de magasins espacés avec des liens */
+
+.flex_logo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 16%;
+    margin-top: 8px;
+    width: auto;
+}
+
+.flex_logo > div {
+    margin: 5% 0%;
+}
+
+
+/* Styles pour le tableau de conversion de tailles de crochets */
+#style_tableau {
+    overflow-x: auto;
+}
+
+.montableau {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Entête du tableau */
+.montableau th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 0px 8px 0px;
+    height: auto;
+    font-size: 14pt;
+    font-family: Baskerville, "Baskerville", minion, serif;
+    font-weight: 600;
+    color: white;
+    background-color: RGB(7, 66, 76);
+    border: solid 1px white;
+    border-radius: 14px 14px 0px 0px;
+}
+
+/* Data du tableau */
+.montableau td {
+    text-align: center;
+    border: solid 1px white;
+    padding: 8px;
+    height: auto;
+    font-size: 12pt;
+    color: black;
+}
+
+/* Rangées impaires */
+.montableau tbody tr:nth-child(odd) {
+    background-color: #DDD;
+}
+
+/* Rangées paires */
+.montableau tbody tr:nth-child(even) {
+    background-color: #EEE;
+}
+
+/* Mise en évidence de la rangée sur laquelle on hover */
+.montableau tr:hover td {
+    color: black;
+    font-weight: 900;
+    background-color: RGB(255, 190, 0);
+}
+
+/* Checkbox jaune-orangé */
+input[type="checkbox"]:checked {
+    /* change "blue" browser chrome to yellow */
+    filter: invert(90%) hue-rotate(18deg) brightness(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- ADAPTATION À LA TAILLE D'ÉCRAN -------- */
+
+@media screen and (min-width : 840px) {
+
+    /* ENTÊTE */
+    /* Bloc navigation centré verticalement */
+    nav {
+        margin-top: 13px;
+        margin-bottom: 13px;
+        padding-right: 24px;
+    }
+
+
+    /* PAGE INDEX */
+
+    /* Teaser à la page index */
+
+    .div_teaser {
+        margin: 40px;
+        margin-top: 24px;
+        width: auto;
+    }
+
+
+    /* Styles principal dans plein de pages et flex_ressources dans la page ressources */
+
+    .flex_principal,
+    .flex_ressources {
+        display: flex;
+        flex-direction: row;
+        margin: 40px;
+        width: auto;
+    }
+
+    .flex_principal > section,
+    .flex_ressources > section {
+        width: 30%;
+        margin-left: none;
+        margin-right: 40px;
+    }
+
+    .flex_principal > aside {
+        width: auto;
+        max-width: 67%;
+    }
+
+    .flex_ressources > aside {
+        width: auto;
+        max-width: 63%;
+        padding-left: 24px;
+        margin-right: 0px;
+    }
+
+
+
+    /* Styles dans la page de catégories de patrons */
+    .flex_patrons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 16px;
+    }
+
+    .flex_patrons > section {
+        margin: 24px 20px 40px 40px;
+    }
+
+    .flex_patrons > aside {
+        margin: 24px 40px 40px 20px;
+    }
+
+
+
+    /* PAGES AVEC GRILLES DE PATRONS */
+
+    /* Grille pour les amigurumis */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'chatassis brachiosaure dino singe'
+            'trex lapin lamantin dindon';
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin: 40px;
+        margin-top: 16px;
+    }
+
+    /* Grille pour les vêtements */
+    .grid-container_vetements {
+        display: grid;
+        grid-template-areas:
+            'pantoufles bas chapeau foulard';
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin: 40px;
+        margin-top: 16px;
+    }
+
+    /* Grille pour le teaser de patrons à l'accueil */
+    .grid-container_accueil {
+        display: grid;
+        grid-template-areas:
+            'chatassis pantoufles brachiosaure lamantin';
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 16px;
+        margin-bottom: -16px;
+    }
+
+
+
+
+
+    /* PAGE DE PATRONS */
+    /* 2 colonnes pour les instructions */
+    .deux_col {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Marge à droite de la colonne gauche */
+    .deux_col div:first-child {
+        margin-right: 32px;
+        width: 100%
+    }
+
+    /* Marge à gauche de la colonne droite */
+    .deux_col div:last-child {
+        margin-left: 32px;
+        width: 100%
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 840px) {
+
+    /* STYLES DE TEXTE DANS L'ENTÊTE */
+    
+    /* Bloc navigation centré verticalement */
+    nav {
+        margin-top: 13px;
+        margin-bottom: 13px;
+        padding-right: 24px;
+    }
+
+    /* LES FLEX ET DIV */
+
+    .flex_principal,
+    .flex_patrons,
+    .div_teaser,
+    .flex_ressources {
+        display: flex;
+        flex-direction: column;
+        margin: 40px;
+    }
+
+
+    .flex_patrons > section,
+    .flex_patrons > aside {
+        margin-bottom: 32px;
+    }
+
+
+
+    /* PAGES AVEC GRILLES DE PATRONS */
+
+    /* Grille pour les amigurumis */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'chatassis brachiosaure'
+            'dino singe'
+            'trex lapin'
+            'lamantin dindon';
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin: 40px;
+        margin-top: 16px;
+    }
+
+    /* Grille pour les vêtements */
+    .grid-container_vetements {
+        display: grid;
+        grid-template-areas:
+            'pantoufles bas'
+            'chapeau foulard';
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin: 40px;
+        margin-top: 16px;
+    }
+
+    /* Grille teaser à la page index */
+    .grid-container_accueil {
+        display: grid;
+        grid-template-areas:
+            'chatassis pantoufles'
+            'brachiosaure lamantin';
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin: 0px;
+        margin-top: 16px;
+    }
+
+
+
+    /* PAGE DE PATRONS */
+
+    /* 1 colonne pour les instructions */
+    .deux_col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .deux_col div:first-child {
+        margin: 0px;
+    }
+
+    .deux_col div:last-child {
+        margin-left: 0px;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 728px) {
+    /* ENTÊTE */
+
+    .lien_entete {
+        font-family: 'helvetica';
+        font-weight: 600;
+        font-size: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 4px;
+        padding-right: 4px;
+        margin: 4px;
+        text-align: center;
+        vertical-align: center;
+        text-decoration: none;
+
+    }
+
+    #nom {
+        font-family: 'helvetica';
+        font-weight: 300;
+        font-size: x-large;
+        margin-top: 8px;
+    }
+
+    nav {
+        margin-top: 13px;
+        margin-bottom: 13px;
+        margin-right: 14px;
+    }
+
+
+}
