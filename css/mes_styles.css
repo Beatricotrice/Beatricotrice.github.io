@@ -935,9 +935,9 @@ input[type="checkbox"]:checked {
         font-size: 16px;
         padding-top: 8px;
         padding-bottom: 8px;
-        padding-left: 4px;
-        padding-right: 4px;
-        margin: 4px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin: 3px;
         text-align: center;
         vertical-align: center;
         text-decoration: none;
@@ -947,8 +947,8 @@ input[type="checkbox"]:checked {
     #nom {
         font-family: 'helvetica';
         font-weight: 300;
-        font-size: x-large;
-        margin-top: 8px;
+        font-size: 16pt;
+        margin-top: 9px;
     }
 
     nav {
