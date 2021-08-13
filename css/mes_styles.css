@@ -41,6 +41,7 @@ img {
 #logo {
     margin-top: auto;
     margin-bottom: auto;
+    width: 100%;
 }
 
 
@@ -938,9 +939,9 @@ input[type="checkbox"]:checked {
         font-size: 18px;
         padding-top: 6px;
         padding-bottom: 6px;
-        padding-left: 8px;
-        padding-right: 8px;
-        margin: 8px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin: 3px;
         text-decoration: none;
         transition: .5s;
     }
@@ -953,7 +954,7 @@ input[type="checkbox"]:checked {
     nav {
         margin-top: 17px;
         margin-bottom: 17px;
-        margin-right: 8px;
+        margin-right: 0px;
         margin-left: 16px;
         width: 275px;
         text-align: right;
