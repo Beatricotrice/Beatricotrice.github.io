@@ -38,6 +38,10 @@ img {
     margin-bottom: 1px;
 }
 
+#logo {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 
 
@@ -278,16 +282,10 @@ a {
     flex-direction: row;
     justify-content: space-between;
     background-color: RGB(7, 66, 76);
-    height: 48px;
+    height: 56px;
     width: auto;
     box-shadow: 0 1px 8px 0px #888;
     padding: 8px 0px 8px 40px;
-}
-
-#div_nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 footer {
@@ -687,8 +685,8 @@ input[type="checkbox"]:checked {
     /* ENTÊTE */
     /* Bloc navigation centré verticalement */
     nav {
-        margin-top: 13px;
-        margin-bottom: 13px;
+        margin-top: 17px;
+        margin-bottom: 17px;
         padding-right: 24px;
     }
 
@@ -835,10 +833,11 @@ input[type="checkbox"]:checked {
     
     /* Bloc navigation centré verticalement */
     nav {
-        margin-top: 13px;
-        margin-bottom: 13px;
+        margin-top: 17px;
+        margin-bottom: 17px;
         padding-right: 24px;
     }
+    
 
     /* LES FLEX ET DIV */
 
@@ -933,13 +932,13 @@ input[type="checkbox"]:checked {
         font-family: 'helvetica';
         font-weight: 600;
         font-size: 16px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        padding-left: 3px;
-        padding-right: 3px;
-        margin: 3px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin: 2px;
         text-align: center;
-        vertical-align: center;
+        vertical-align: middle;
         text-decoration: none;
 
     }
@@ -952,9 +951,9 @@ input[type="checkbox"]:checked {
     }
 
     nav {
-        margin-top: 13px;
-        margin-bottom: 13px;
-        margin-right: 14px;
+        margin-top: 17px;
+        margin-bottom: 17px;
+        margin-right: 8px;
     }
 
 
