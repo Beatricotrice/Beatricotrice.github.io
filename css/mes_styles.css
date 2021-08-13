@@ -367,8 +367,6 @@ footer {
     filter: grayscale(100%);
     opacity: 50%;
     transition: 0.25s;
-
-
 }
 
 #patrons:hover {
@@ -936,6 +934,44 @@ input[type="checkbox"]:checked {
     .lien_entete {
         font-family: 'helvetica';
         font-weight: bold;
+        font-size: 18px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 4px;
+        padding-right: 4px;
+        margin: 4px;
+        text-decoration: none;
+    }
+
+    nav {
+        margin-top: 17px;
+        margin-bottom: 17px;
+        margin-right: 32px;
+        margin-left: 0px;
+        text-align: right;
+        padding-right: 8px;
+    }
+
+    nav a:first-child {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+/* Petit petit écran comme un cell */
+
+@media screen and (max-width: 450px) {
+    
+    /* ENTÊTE */
+    .lien_entete {
+        font-family: 'helvetica';
+        font-weight: bold;
         font-size: 16px;
         padding-top: 6px;
         padding-bottom: 6px;
@@ -957,9 +993,21 @@ input[type="checkbox"]:checked {
     nav a:first-child {
         display: none;
     }
-
-
+    
     /* PAGES AVEC GRILLES DE PATRONS */
+    
+    /* Items des grilles en couleurs pour le cell */
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12 {
+        filter: grayscale(0%);
+        
+    }
+    .grid-container > div,
+    .grid-container_vetements > div,
+    .grid-container_accueil > div {
+        background-color: #EEE;
+        border-radius: 2px;
+        box-shadow: 1px 1px 3px 0px #CCC;
+    }
 
     /* Grille pour les amigurumis */
     .grid-container {
@@ -998,86 +1046,23 @@ input[type="checkbox"]:checked {
 
     /* Grille teaser à la page index */
     .grid-container_accueil {
-        display: grid;
-        grid-template-areas:
-            'chatassis'
-            'pantoufles'
-            'brachiosaure'
-            'lamnatin';
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        grid-row-gap: 24px;
-        grid-column-gap: 40px;
+        display: flex;
+        flex-direction: column;
         margin: 0px;
         margin-top: 16px;
     }
+    
+    
+    /* PAGE CATÉGORIES DE PATRONS */
+    #patrons {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: black;
+    filter: grayscale(0%);
+    opacity: 100%;
+    padding-bottom: 56px;
+}
 
-    /* Items des grilles en couleurs pour le cell */
-    .item1 {
-        grid-area: chatassis;
-        filter: grayscale(0%);
-    }
-
-    .item2 {
-        grid-area: brachiosaure;
-        filter: grayscale(0%);
-    }
-
-    .item3 {
-        grid-area: dino;
-        filter: grayscale(0%);
-    }
-
-    .item4 {
-        grid-area: singe;
-        filter: grayscale(0%);
-    }
-
-    .item5 {
-        grid-area: trex;
-        filter: grayscale(0%);
-    }
-
-    .item6 {
-        grid-area: lapin;
-        filter: grayscale(0%);
-    }
-
-    .item7 {
-        grid-area: lamantin;
-        filter: grayscale(0%);
-    }
-
-    .item8 {
-        grid-area: dindon;
-        filter: grayscale(0%);
-    }
-
-    .item9 {
-        grid-area: pantoufles;
-        filter: grayscale(0%);
-    }
-
-    .item10 {
-        grid-area: bas;
-        filter: grayscale(0%);
-    }
-
-    .item11 {
-        grid-area: chapeau;
-        filter: grayscale(0%);
-    }
-
-    .item12 {
-        grid-area: foulard;
-        filter: grayscale(0%);
-    }
-
-    .grid-container > div,
-    .grid-container_vetements > div,
-    .grid-container_accueil > div {
-        background-color: #EEE;
-        border-radius: 2px;
-        box-shadow: 1px 1px 3px 0px #CCC;
-    }
-
+    
 }
