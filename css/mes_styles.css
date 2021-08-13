@@ -332,6 +332,11 @@ footer {
     vertical-align: text-top;
     justify-content: space-between;
     margin-top: 32px;
+    text-align: right;
+}
+
+.flex_index_voir div:first-child {
+    width: 80%;
 }
 
 .flex_index_voir div:last-child:hover {
