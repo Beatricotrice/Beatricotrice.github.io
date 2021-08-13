@@ -931,7 +931,7 @@ input[type="checkbox"]:checked {
 
 
 @media screen and (max-width: 700px) {
-    
+
     /* ENTÊTE */
     .lien_entete {
         font-family: 'helvetica';
@@ -956,6 +956,128 @@ input[type="checkbox"]:checked {
 
     nav a:first-child {
         display: none;
+    }
+
+
+    /* PAGES AVEC GRILLES DE PATRONS */
+
+    /* Grille pour les amigurumis */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'chatassis'
+            'brachiosaure'
+            'dino'
+            'singe'
+            'trex'
+            'lapin'
+            'lamantin'
+            'dindon';
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin: 40px;
+        margin-top: 16px;
+    }
+
+    /* Grille pour les vêtements */
+    .grid-container_vetements {
+        display: grid;
+        grid-template-areas:
+            'pantoufles'
+            'bas'
+            'chapeau'
+            'foulard';
+
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin: 40px;
+        margin-top: 16px;
+    }
+
+    /* Grille teaser à la page index */
+    .grid-container_accueil {
+        display: grid;
+        grid-template-areas:
+            'chatassis'
+            'pantoufles'
+            'brachiosaure'
+            'lamnatin';
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-row-gap: 24px;
+        grid-column-gap: 40px;
+        margin: 0px;
+        margin-top: 16px;
+    }
+
+    /* Items des grilles en couleurs pour le cell */
+    .item1 {
+        grid-area: chatassis;
+        filter: grayscale(0%);
+    }
+
+    .item2 {
+        grid-area: brachiosaure;
+        filter: grayscale(0%);
+    }
+
+    .item3 {
+        grid-area: dino;
+        filter: grayscale(0%);
+    }
+
+    .item4 {
+        grid-area: singe;
+        filter: grayscale(0%);
+    }
+
+    .item5 {
+        grid-area: trex;
+        filter: grayscale(0%);
+    }
+
+    .item6 {
+        grid-area: lapin;
+        filter: grayscale(0%);
+    }
+
+    .item7 {
+        grid-area: lamantin;
+        filter: grayscale(0%);
+    }
+
+    .item8 {
+        grid-area: dindon;
+        filter: grayscale(0%);
+    }
+
+    .item9 {
+        grid-area: pantoufles;
+        filter: grayscale(0%);
+    }
+
+    .item10 {
+        grid-area: bas;
+        filter: grayscale(0%);
+    }
+
+    .item11 {
+        grid-area: chapeau;
+        filter: grayscale(0%);
+    }
+
+    .item12 {
+        grid-area: foulard;
+        filter: grayscale(0%);
+    }
+
+    .grid-container > div,
+    .grid-container_vetements > div,
+    .grid-container_accueil > div {
+        background-color: #EEE;
+        border-radius: 2px;
+        box-shadow: 1px 1px 3px 0px #CCC;
     }
 
 }
