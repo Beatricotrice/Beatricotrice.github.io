@@ -607,13 +607,14 @@ footer {
     color: white;
     background-color: RGB(7, 66, 76);
     border: solid 1px white;
-    border-radius: 14px 14px 0px 0px;
+    border-radius: 4px 4px 2px 2px;
 }
 
 /* Data du tableau */
 .montableau td {
     text-align: center;
     border: solid 1px white;
+    border-radius: 2px;
     padding: 8px;
     height: auto;
     font-size: 12pt;
