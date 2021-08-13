@@ -677,7 +677,7 @@ input[type="checkbox"]:checked {
 
 
 
-/* -------- ADAPTATION À LA TAILLE D'ÉCRAN -------- */
+/* -------- ADAPTATION À LA TAILLE D'ÉCRAN : LE PLUS LARGE -------- */
 
 @media screen and (min-width : 840px) {
 
@@ -793,7 +793,6 @@ input[type="checkbox"]:checked {
 
 
 
-
     /* PAGE DE PATRONS */
     /* 2 colonnes pour les instructions */
     .deux_col {
@@ -830,6 +829,10 @@ input[type="checkbox"]:checked {
 
 
 
+
+
+
+/* -------- ADAPTATION À LA TAILLE D'ÉCRAN : MEDIUM WEB -------- */
 @media screen and (max-width: 840px) {
 
     /* STYLES DE TEXTE DANS L'ENTÊTE */
@@ -928,6 +931,14 @@ input[type="checkbox"]:checked {
 
 
 
+
+
+
+
+
+/* -------- ADAPTATION À LA TAILLE D'ÉCRAN : PETIT WEB -------- */
+
+
 @media screen and (max-width: 700px) {
 
     /* ENTÊTE */
@@ -964,7 +975,12 @@ input[type="checkbox"]:checked {
 
 
 
-/* Petit petit écran comme un cell */
+
+
+
+
+
+/* -------- ADAPTATION À LA TAILLE D'ÉCRAN : CELL -------- */
 
 @media screen and (max-width: 450px) {
     
@@ -975,8 +991,8 @@ input[type="checkbox"]:checked {
         font-size: 16px;
         padding-top: 6px;
         padding-bottom: 6px;
-        padding-left: 3px;
-        padding-right: 3px;
+        padding-left: 2px;
+        padding-right: 2px;
         margin: 3px;
         text-decoration: none;
     }
@@ -987,11 +1003,28 @@ input[type="checkbox"]:checked {
         margin-right: 0px;
         margin-left: 0px;
         text-align: right;
-        padding-right: 8px;
+        padding-right: 16px;
     }
 
     nav a:first-child {
         display: none;
+    }
+    
+    
+
+    /* LES FLEX ET DIV */
+
+    .flex_principal,
+    .flex_patrons,
+    .div_teaser,
+    .flex_ressources {
+        display: flex;
+        flex-direction: column;
+        margin: 16px;
+    }
+    
+    .div_entete {
+         padding: 8px 0px 8px 16px;
     }
     
     /* PAGES AVEC GRILLES DE PATRONS */
@@ -999,8 +1032,8 @@ input[type="checkbox"]:checked {
     /* Items des grilles en couleurs pour le cell */
     .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12 {
         filter: grayscale(0%);
-        
     }
+    
     .grid-container > div,
     .grid-container_vetements > div,
     .grid-container_accueil > div {
