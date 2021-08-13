@@ -160,6 +160,7 @@ a {
 
 /* STYLES DE TEXTE DANS L'ENTÊTE */
 
+
 /* Onglet pour chacune des pages */
 .lien_entete {
     font-family: 'helvetica';
@@ -836,7 +837,11 @@ input[type="checkbox"]:checked {
     /* STYLES DE TEXTE DANS L'ENTÊTE */
 
     /* Bloc navigation centré verticalement */
-
+    nav {
+        margin-top: 17px;
+        margin-bottom: 17px;
+        padding-right: 24px;
+    }
 
 
     /* LES FLEX ET DIV */
@@ -925,29 +930,28 @@ input[type="checkbox"]:checked {
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+    
     /* ENTÊTE */
-
     .lien_entete {
         font-family: 'helvetica';
         font-weight: bold;
-        font-size: 18px;
+        font-size: 16px;
         padding-top: 6px;
         padding-bottom: 6px;
         padding-left: 3px;
         padding-right: 3px;
         margin: 3px;
         text-decoration: none;
-        transition: .5s;
     }
 
     nav {
         margin-top: 17px;
         margin-bottom: 17px;
-        margin-right: 16px;
-        margin-left: 8px;
-        width: 250px;
+        margin-right: 0px;
+        margin-left: 0px;
         text-align: right;
+        padding-right: 8px;
     }
 
     nav a:first-child {
