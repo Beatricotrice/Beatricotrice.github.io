@@ -41,7 +41,6 @@ img {
 #logo {
     margin-top: auto;
     margin-bottom: auto;
-    width: 100%;
 }
 
 
@@ -168,8 +167,8 @@ a {
     font-size: 18px;
     padding-top: 6px;
     padding-bottom: 6px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 18px;
+    padding-right: 18px;
     margin: 16px;
     text-align: center;
     vertical-align: center;
@@ -837,11 +836,7 @@ input[type="checkbox"]:checked {
     /* STYLES DE TEXTE DANS L'ENTÊTE */
 
     /* Bloc navigation centré verticalement */
-    nav {
-        margin-top: 17px;
-        margin-bottom: 17px;
-        padding-right: 24px;
-    }
+
 
 
     /* LES FLEX ET DIV */
@@ -930,7 +925,7 @@ input[type="checkbox"]:checked {
 
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 500px) {
     /* ENTÊTE */
 
     .lien_entete {
@@ -946,20 +941,17 @@ input[type="checkbox"]:checked {
         transition: .5s;
     }
 
+    nav {
+        margin-top: 17px;
+        margin-bottom: 17px;
+        margin-right: 16px;
+        margin-left: 8px;
+        width: 250px;
+        text-align: right;
+    }
 
     nav a:first-child {
         display: none;
     }
-
-    nav {
-        margin-top: 17px;
-        margin-bottom: 17px;
-        margin-right: 0px;
-        margin-left: 16px;
-        width: 275px;
-        text-align: right;
-    }
-
-
 
 }
