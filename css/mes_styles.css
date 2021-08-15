@@ -239,6 +239,12 @@ a {
 
 /* STYLES DE TEXTE DANS LES PAGES DE PATRONS */
 
+/* Titres h2 sans la marge en-dessous dans la page de catégories de patrons */
+
+#h2_categ {
+    margin-bottom: 00px;
+}
+
 /* Fiche descriptive de patron */
 #fiche_patron p {
     text-align: left;
@@ -742,15 +748,14 @@ input[type="checkbox"]:checked {
     .flex_patrons {
         display: flex;
         flex-direction: row;
-        margin-top: 16px;
     }
 
     .flex_patrons > section {
-        margin: 24px 20px 40px 40px;
+        margin: 0px 20px 40px 40px;
     }
 
     .flex_patrons > aside {
-        margin: 24px 40px 40px 20px;
+        margin: 0px 40px 40px 20px;
     }
 
 
@@ -1100,8 +1105,13 @@ input[type="checkbox"]:checked {
     color: black;
     filter: grayscale(0%);
     opacity: 100%;
-    padding-bottom: 56px;
 }
+    
+    /* Coller les titres sur les images de catégories */
+    #h2_categ_cell {
+        margin-top: -16px;
+        margin-bottom: 0px;
+    }
 
     
 }
