@@ -448,26 +448,31 @@ footer {
 }
 
 .item8 {
-    grid-area: dindon;
+    grid-area: renard;
     filter: grayscale(100%);
 }
 
 .item9 {
-    grid-area: pantoufles;
+    grid-area: hibou;
     filter: grayscale(100%);
 }
 
 .item10 {
-    grid-area: bas;
+    grid-area: pantoufles;
     filter: grayscale(100%);
 }
 
 .item11 {
-    grid-area: chapeau;
+    grid-area: bas;
     filter: grayscale(100%);
 }
 
 .item12 {
+    grid-area: chapeau;
+    filter: grayscale(100%);
+}
+
+.item13 {
     grid-area: foulard;
     filter: grayscale(100%);
 }
@@ -766,9 +771,10 @@ input[type="checkbox"]:checked {
     .grid-container {
         display: grid;
         grid-template-areas:
-            'chatassis brachiosaure dino singe'
-            'trex lapin lamantin dindon';
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+            'chatassis brachiosaure dino'
+            'singe trex lapin'
+            'lamantin renard hibou';
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-row-gap: 24px;
         grid-column-gap: 40px;
         margin: 40px;
@@ -779,8 +785,8 @@ input[type="checkbox"]:checked {
     .grid-container_vetements {
         display: grid;
         grid-template-areas:
-            'pantoufles bas chapeau foulard';
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+            'pantoufles bas chapeau';
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-row-gap: 24px;
         grid-column-gap: 40px;
         margin: 40px;
@@ -791,7 +797,7 @@ input[type="checkbox"]:checked {
     .grid-container_accueil {
         display: grid;
         grid-template-areas:
-            'chatassis pantoufles brachiosaure lamantin';
+            'chatassis pantoufles renard hibou';
         grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-row-gap: 24px;
         grid-column-gap: 40px;
@@ -884,7 +890,8 @@ input[type="checkbox"]:checked {
             'chatassis brachiosaure'
             'dino singe'
             'trex lapin'
-            'lamantin dindon';
+            'lamantin renard'
+            'hibou empty';
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-row-gap: 24px;
         grid-column-gap: 40px;
@@ -897,7 +904,7 @@ input[type="checkbox"]:checked {
         display: grid;
         grid-template-areas:
             'pantoufles bas'
-            'chapeau foulard';
+            'chapeau empty';
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-row-gap: 24px;
         grid-column-gap: 40px;
@@ -910,7 +917,7 @@ input[type="checkbox"]:checked {
         display: grid;
         grid-template-areas:
             'chatassis pantoufles'
-            'brachiosaure lamantin';
+            'renard hibou';
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-row-gap: 24px;
         grid-column-gap: 40px;
@@ -1040,8 +1047,14 @@ input[type="checkbox"]:checked {
     
     /* PAGES AVEC GRILLES DE PATRONS */
     
+    /* Marges réduites pour le retour aux catégories de patrons */
+    #div_fleche {
+        margin: 16px;
+    }
+    
+    
     /* Items des grilles en couleurs pour le cell */
-    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12 {
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12, .item13 {
         filter: grayscale(0%);
     }
     
@@ -1064,12 +1077,11 @@ input[type="checkbox"]:checked {
             'trex'
             'lapin'
             'lamantin'
-            'dindon';
+            'renard'
+            'hibou';
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        grid-row-gap: 24px;
-        grid-column-gap: 40px;
-        margin: 40px;
-        margin-top: 16px;
+        grid-row-gap: 0px;
+        margin: 16px;
     }
 
     /* Grille pour les vêtements */
@@ -1078,14 +1090,10 @@ input[type="checkbox"]:checked {
         grid-template-areas:
             'pantoufles'
             'bas'
-            'chapeau'
-            'foulard';
-
+            'chapeau';
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        grid-row-gap: 24px;
-        grid-column-gap: 40px;
-        margin: 40px;
-        margin-top: 16px;
+        grid-row-gap: 0px;
+        margin: 16px;
     }
 
     /* Grille teaser à la page index */
